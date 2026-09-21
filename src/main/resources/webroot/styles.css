@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(135deg, #1e1b4b, #7c3aed);
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #c4b5fd;
+    font-size: 0.95rem;
+}
+
+main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    color: #a78bfa;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 0.5rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+input[type="text"],
+input[type="number"] {
+    flex: 1;
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #475569;
+    background: #0f172a;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: #7c3aed;
+}
+
+button {
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    border: none;
+    background: #7c3aed;
+    color: white;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #6d28d9;
+}
+
+.result {
+    background: #0f172a;
+    border: 1px solid #22c55e;
+    border-radius: 8px;
+    padding: 0.8rem;
+    color: #86efac;
+    font-size: 0.95rem;
+}
+
+.error {
+    background: #0f172a;
+    border: 1px solid #ef4444;
+    border-radius: 8px;
+    padding: 0.8rem;
+    color: #fca5a5;
+    font-size: 0.95rem;
+}
+
+.loading {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background: #1e293b;
+    border-top: 1px solid #334155;
+    padding: 1.5rem;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 0.5rem;
+}

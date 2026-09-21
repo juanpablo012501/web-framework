@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Framework</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>⚙️ Web Framework</h1>
+    <p>Mini framework HTTP en Java con lambdas</p>
+</header>
+
+<main>
+
+    <section class="card">
+        <h2>👋 Saludo</h2>
+        <div class="input-group">
+            <input type="text" id="greetName" placeholder="Tu nombre">
+            <button onclick="greet()">Saludar</button>
+        </div>
+        <div id="greetLoading" class="loading hidden">Cargando...</div>
+        <div id="greetResult" class="result hidden"></div>
+        <div id="greetError" class="error hidden"></div>
+    </section>
+
+    <section class="card">
+        <h2>🔢 Cuadrado</h2>
+        <div class="input-group">
+            <input type="number" id="squareValue" placeholder="Número">
+            <button onclick="square()">Calcular</button>
+        </div>
+        <div id="squareLoading" class="loading hidden">Cargando...</div>
+        <div id="squareResult" class="result hidden"></div>
+        <div id="squareError" class="error hidden"></div>
+    </section>
+
+    <section class="card">
+        <h2>🥧 Valor de PI</h2>
+        <button onclick="getPi()">Obtener PI</button>
+        <div id="piLoading" class="loading hidden">Cargando...</div>
+        <div id="piResult" class="result hidden"></div>
+        <div id="piError" class="error hidden"></div>
+    </section>
+
+    <section class="card">
+        <h2>🕐 Hora del servidor</h2>
+        <button onclick="getTime()">Obtener hora</button>
+        <div id="timeLoading" class="loading hidden">Cargando...</div>
+        <div id="timeResult" class="result hidden"></div>
+        <div id="timeError" class="error hidden"></div>
+    </section>
+
+</main>
+
+<footer>
+    <img src="/images/logo.png" alt="Logo">
+    <p>Laboratorio TDSE — Mini Framework en Java</p>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>
