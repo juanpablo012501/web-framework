@@ -408,7 +408,7 @@ the application running on AWS EC2:
 ## 📌 Progreso y evidencia del commit
 
 Commit principal de esta extensión: `Implement concurrent request handling and graceful shutdown`
-([ver commit](https://github.com/juanpablo012501/web-framework/commit/TU_HASH_AQUI))
+([ver commit](https://github.com/juanpablo012501/web-framework/commit/63e3d1f))
 
 Cambios incluidos en este commit:
 - Servidor concurrente con pool de hilos configurable (`WORKER_THREADS`)
