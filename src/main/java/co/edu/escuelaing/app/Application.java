@@ -43,6 +43,20 @@ public class Application {
             return "{\"serverTime\": \"" + now + "\"}";
         });
 
+        // Ruta de demostracion de concurrencia: responde tras esperar ms milisegundos
+        // (maximo 5000) e indica que hilo del pool atendio la peticion.
+        get("/sleep", (req, resp) -> {
+            long ms = 1000;
+            try {
+                ms = Long.parseLong(req.getValue("ms"));
+            } catch (Exception e) {
+                // parametro ausente o invalido: se usa el valor por defecto
+            }
+            ms = Math.max(0, Math.min(ms, 5000));
+            Thread.sleep(ms);
+            return "Slept " + ms + " ms on " + Thread.currentThread().getName();
+        });
+
         // Shutdown solo en desarrollo
         String env = System.getenv().getOrDefault("APP_ENV", "development");
         if (env.equals("development")) {

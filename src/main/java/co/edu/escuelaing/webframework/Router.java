@@ -1,13 +1,13 @@
 package co.edu.escuelaing.webframework;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Router {
 
     // Mapa de path → lambda handler
     // Ejemplo: "/hello" → (req, resp) -> "Hello world"
-    private final Map<String, RouteHandler> routes = new HashMap<>();
+    private final Map<String, RouteHandler> routes = new ConcurrentHashMap<>();
 
     // Registra una ruta GET con su handler
     public void get(String path, RouteHandler handler) {
