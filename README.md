@@ -288,4 +288,3 @@ APP_ENV=production nohup java -jar web-framework.jar > server.log 2>&1 &
 
 **Juan Pablo Velez Munoz**  
 Escuela Colombiana de Ingeniería Julio Garavito  
-Laboratorio AREP
